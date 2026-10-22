@@ -1,10 +1,11 @@
+import random 
+number = random.randint(1, 100) 
 while True:
-    user_input = input("Введите целое десятичное число: ").strip()
-    if user_input.isdigit() or (user_input.startswith('-') and user_input[1:].isdigit()):
-        number = int(user_input)
+    guess = int(input("Введите число: "))
+    if guess < number:
+        print('Больше')
+    elif guess > number:
+        print('Меньше')
+    else:
+        print('Вы угадали')
         break
-    print("Ошибка ввода!")
-
-print(f"Двоичная: {bin(number)[2:]}")
-print(f"Восьмеричная: {oct(number)[2:]}")
-print(f"Шестнадцатеричная: {hex(number).upper()[2:]}")
