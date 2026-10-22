@@ -1,20 +1,6 @@
-a, b, operation = (
-    float(input("Введите первое число: ")),
-    float(input("Введите второе число: ")),
-    input("Введите операцию (+, -, *, /): ").strip(),
-)
+year = int(input("Введите год: "))
 
-match operation:
-    case "+":
-        print(f"Результат: {a + b}")
-    case "-":
-        print(f"Результат: {a - b}")
-    case "*":
-        print(f"Результат: {a * b}")
-    case "/":
-        if b == 0:
-            print("Ошибка: делить на ноль нельзя!")
-        else:
-            print(f"Результат: {a / b:.2f}")
-    case _:
-        print("Неизвестная операция")
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(f"{year} - високосный год")
+else:
+    print(f"{year} - не високосный год")
