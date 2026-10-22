@@ -1,5 +1,5 @@
-number = int(input("Enter a number: "))
-if number % 2 == 0:
-    print(f"Число {number} четное")
-else:
-    print(f"Число {number} нечетное")
+a = float(input("Enter a number: "))
+b = float(input("Enter a number: "))
+c = float(input("Enter a number: "))
+maximum = max(a, b, c)
+print(f"Максимум - {maximum}")
