@@ -1,21 +1,21 @@
-while True:
-    try:
-        weight = float(input("Введите вес в кг: "))
-        height = float(input("Введите рост в метрах (например, 1.75): "))
-        if weight > 0 and height > 0:
-            break
-        print("Значения должны быть больше нуля!")
-    except ValueError:
-        print("Ошибка! Введите числа.")
+try:
+    x = float(input("Введите x: "))
+    y = float(input("Введите y: "))
 
-imt = weight / (height ** 2)
-print(f"\nВаш ИМТ: {imt:.2f}")
-
-if imt < 18.5:
-    print("Категория: Недостаточный вес")
-elif imt < 25:
-    print("Категория: Норма")
-elif imt < 30:
-    print("Категория: Избыточный вес")
-else:
-    print("Категория: Ожирение")
+    if x == 0 and y == 0:
+        print("Точка находится в начале координат")
+    elif x == 0:
+        print("Точка находится на оси Y")
+    elif y == 0:
+        print("Точка находится на оси X")
+    elif x > 0 and y > 0:
+        print("1-я координатная четверть")
+    elif x < 0 and y > 0:
+        print("2-я координатная четверть")
+    elif x < 0 and y < 0:
+        print("3-я координатная четверть")
+    else:
+        print("4-я координатная четверть")
+        
+except ValueError:
+    print("Ошибка! Введите числовые значения.")
