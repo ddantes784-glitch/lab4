@@ -1,15 +1,10 @@
-a, b, c = (
-    float(input("Введите сторону a: ")),
-    float(input("Введите сторону b: ")),
-    float(input("Введите сторону c: ")),
-)
+while True:
+    user_input = input("Введите целое десятичное число: ").strip()
+    if user_input.isdigit() or (user_input.startswith('-') and user_input[1:].isdigit()):
+        number = int(user_input)
+        break
+    print("Ошибка ввода!")
 
-if a + b > c and a + c > b and b + c > a:
-    if a == b == c:
-        print("Равносторонний треугольник")
-    elif a == b or a == c or b == c:
-        print("Равнобедренный треугольник")
-    else:
-        print("Разносторонний треугольник")
-else:
-    print("Треугольник не существует")
+print(f"Двоичная: {bin(number)[2:]}")
+print(f"Восьмеричная: {oct(number)[2:]}")
+print(f"Шестнадцатеричная: {hex(number).upper()[2:]}")
