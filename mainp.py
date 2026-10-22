@@ -1,5 +1,9 @@
-a = float(input("Enter a number: "))
-b = float(input("Enter a number: "))
-c = float(input("Enter a number: "))
-maximum = max(a, b, c)
-print(f"Максимум - {maximum}")
+age = int(input('Введите возраст: '))
+if age <= 12:
+    print('Ребенок')
+elif age <= 17:
+    print('Подросток')
+elif age <= 64:
+    print('Взрослый')
+else:
+    print('Пожилой')
